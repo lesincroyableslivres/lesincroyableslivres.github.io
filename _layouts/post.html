@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="ui main text container">
+    <br />
+    <br />
+    <article>
+        {% assign livre_id = page.url | relative_url | remove_first: '/livre/' | remove_first: '.html' %}
+        {% assign livre_image_original_root = livre_id | prepend: '/assets/images/livres/' %}
+        {% assign livre_image_full_root = livre_id | prepend: '/assets/images/livres-full/' %}
+        {% assign livre_image_medium_root = livre_id | prepend: '/assets/images/livres-medium/' %}
+        <div class="ui grid">
+            <div class="three wide column"></div>
+            <div class="ten wide column">
+                <h1 class="cursive" itemprop="name headline">{{ page.title | escape }}</h1>
+                <div class="author">Écrit par {{ page.author | escape }}</div>
+                <div class="content" itemprop="articleBody">
+                    {{ content }}
+                </div>
+            </div>
+            <div class="three wide column"></div>
+        </div>
+        <hr>
+        <div class="ui medium images centered" id="gallery">
+            {% capture couverture_exists %}{% file_exists {{ livre_image_original_root }}couverture.jpg %}{% endcapture %}
+            {% if couverture_exists == "true" %}
+            <a href="{{ livre_image_full_root }}couverture.jpg"><img class="ui image bordered rounded raised" src="{{ livre_image_medium_root }}couverture.jpg" title="{{ page.title | escape }} - Couverture"></a>
+            {% endif %}
+            {% capture extrait_exists %}{% file_exists {{ livre_image_original_root }}extrait.jpg %}{% endcapture %}
+            {% if extrait_exists == "true" %}
+            <a href="{{ livre_image_full_root }}extrait.jpg"><img class="ui image bordered rounded raised" src="{{ livre_image_medium_root }}extrait.jpg" title="{{ page.title | escape }} - Extrait"></a>
+            {% endif %}
+        </div>
+        <script>
+            var lightbox = $('#gallery a').simpleLightbox({ showCounter: false, animationSpeed: 50 });
+        </script>
+    </article>
+</div>
