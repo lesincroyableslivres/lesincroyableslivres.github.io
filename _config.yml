@@ -48,15 +48,15 @@ mini_magick:
   thumbnail:
     source: assets/images/livres/
     destination: assets/images/livres-small/
-    resize: "150x"
+    resize: "x150"
   medium:
     source: assets/images/livres/
     destination: assets/images/livres-medium/
-    resize: "300x"
+    resize: "x300"
   full:
     source: assets/images/livres/
     destination: assets/images/livres-full/
-    resize: "800x"
+    resize: "x800"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
