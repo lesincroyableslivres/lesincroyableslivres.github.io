@@ -16,6 +16,10 @@ body {
     margin-left: -150px;
 }
 
+.incroyablelibraire .ui.tiny.images img {
+    height: 80px;
+}
+
 .ui.segment.introduction {
     background: #f07c41;
     color: white;
