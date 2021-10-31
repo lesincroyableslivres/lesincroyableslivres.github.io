@@ -48,17 +48,11 @@ mini_magick:
   thumbnail:
     source: assets/images/livres/
     destination: assets/images/livres-small/
-    resize: "150x200^"
-    background: "white"
-    gravity: "center"
-    extent: "150x200"
+    resize: "150x"
   medium:
     source: assets/images/livres/
     destination: assets/images/livres-medium/
-    resize: "300x400^"
-    background: "white"
-    gravity: "center"
-    extent: "300x400"
+    resize: "300x"
   full:
     source: assets/images/livres/
     destination: assets/images/livres-full/
