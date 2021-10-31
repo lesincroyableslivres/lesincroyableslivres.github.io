@@ -45,8 +45,12 @@ body {
     border: 1px solid #df622c;
 }
 
-.ui.menu .item, .ui.inverted.link.list a.item, .ui.inverted.list>a.item>i.icon {
+.ui.menu .item, .ui.inverted.link.list a.item {
     color: #c7eef5;
+}
+
+.ui.inverted.list>a.item>i.icon {
+    color: inherit;
 }
 
 .ui.divided.inverted.horizontal.list>.item, .ui.divided.inverted.list>.item, .ui.divided.inverted.list>.list {
