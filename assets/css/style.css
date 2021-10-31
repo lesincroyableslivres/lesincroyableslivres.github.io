@@ -7,6 +7,15 @@ body {
 .ui.menu .header.item:hover {
     color: white;
 }
+
+.ui.menu a.header.title.item {
+    color: white;
+}
+
+.ui.menu .header.title.item:hover {
+    color: #c7eef5;
+}
+
 .incroyablelibraire {
     position: fixed;
     left: 50%;
@@ -36,9 +45,14 @@ body {
     border: 1px solid #df622c;
 }
 
-.ui.menu .item {
+.ui.menu .item, .ui.inverted.link.list a.item, .ui.inverted.list>a.item>i.icon {
     color: #c7eef5;
 }
+
+.ui.divided.inverted.horizontal.list>.item, .ui.divided.inverted.list>.item, .ui.divided.inverted.list>.list {
+    border-color: #c7eef5;
+}
+
 .ui.menu .item img.logo {
     margin-right: 1.5em;
 }
@@ -65,6 +79,10 @@ body {
     font-size: 2.5rem !important;
 }
 
+.cursive.small {
+    font-size: 1.5rem !important;
+}
+
 h1, h2 {
     color: #df622c;
 }
@@ -88,6 +106,10 @@ hr:before {
     content: "\2022 \2022 \2022";
     font-size: 50px;
     color: #02244a;
+}
+
+.ui.footer.segment .cursive {
+    color: white;
 }
 
 .footer hr {
