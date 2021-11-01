@@ -11,11 +11,11 @@
     <meta property="og:locale" content="fr" />
     <meta
       name="description"
-      content="C’est une histoire de libraire et de lecteur. Et avant tout une histoire de livres."
+      content="C’est une histoire de libraire et de lecteur. C’est avant tout une histoire de livres."
     />
     <meta
       property="og:description"
-      content="C’est une histoire de libraire et de lecteur. Et avant tout une histoire de livres."
+      content="C’est une histoire de libraire et de lecteur. C’est avant tout une histoire de livres."
     />
     <link rel="canonical" href="https://lincroyablelibraire.fr/a-propos/" />
     <meta
@@ -28,7 +28,7 @@
     <script type="application/ld+json">
       {
         "headline": "À propos",
-        "description": "C’est une histoire de libraire et de lecteur. Et avant tout une histoire de livres.",
+        "description": "C’est une histoire de libraire et de lecteur. C’est avant tout une histoire de livres.",
         "url": "https://lincroyablelibraire.fr/a-propos/",
         "@type": "WebPage",
         "@context": "https://schema.org"
@@ -197,4 +197,13 @@
       </div>
     </div>
   </body>
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 75) {
+        $(".incroyablelibraire").fadeOut();
+      } else {
+        $(".incroyablelibraire").fadeIn();
+      }
+    });
+  </script>
 </html>

@@ -171,4 +171,13 @@
       </div>
     </div>
   </body>
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 75) {
+        $(".incroyablelibraire").fadeOut();
+      } else {
+        $(".incroyablelibraire").fadeIn();
+      }
+    });
+  </script>
 </html>

@@ -11,11 +11,11 @@
     <meta property="og:locale" content="fr" />
     <meta
       name="description"
-      content="C’est une histoire de libraire et de lecteur. Et avant tout une histoire de livres."
+      content="C’est une histoire de libraire et de lecteur. C’est avant tout une histoire de livres."
     />
     <meta
       property="og:description"
-      content="C’est une histoire de libraire et de lecteur. Et avant tout une histoire de livres."
+      content="C’est une histoire de libraire et de lecteur. C’est avant tout une histoire de livres."
     />
     <link rel="canonical" href="https://lincroyablelibraire.fr/404.html" />
     <meta property="og:url" content="https://lincroyablelibraire.fr/404.html" />
@@ -25,7 +25,7 @@
     <script type="application/ld+json">
       {
         "headline": "Page non trouvée",
-        "description": "C’est une histoire de libraire et de lecteur. Et avant tout une histoire de livres.",
+        "description": "C’est une histoire de libraire et de lecteur. C’est avant tout une histoire de livres.",
         "url": "https://lincroyablelibraire.fr/404.html",
         "@type": "WebPage",
         "@context": "https://schema.org"
@@ -116,4 +116,13 @@
       </div>
     </div>
   </body>
+  <script>
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 75) {
+        $(".incroyablelibraire").fadeOut();
+      } else {
+        $(".incroyablelibraire").fadeIn();
+      }
+    });
+  </script>
 </html>
