@@ -1,6 +1,14 @@
+---
+---
+
 body {
     background: white;
 }
+
+main {
+    padding-top: 25px;
+}
+
 .ui.menu {
     background: #02244a;
 }
@@ -29,10 +37,11 @@ body {
     height: 80px;
 }
 
-.ui.segment.introduction {
+.ui.piled.segment.introduction {
     background: #f07c41;
     color: white;
     border: 1px solid #df622c;
+    margin: 2em 0;
 }
 
 .ui.segment.introduction .ui.header {
@@ -133,7 +142,7 @@ hr:before {
 }
 
 .ui.image.raised {
-    box-shadow: 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgb(34 36 38 / 12%), 0 2px 10px 0 rgb(34 36 38 / 15%);
+    //box-shadow: 0 0 0 1px #d4d4d5, 0 2px 4px 0 rgb(34 36 38 / 12%), 0 2px 10px 0 rgb(34 36 38 / 15%);
 }
 
 .author {
@@ -142,4 +151,17 @@ hr:before {
     color: #4183c4;
     font-weight: bold;
     font-style: italic;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+    [class*="mobile hidden"],
+    [class*="tablet only"]:not(.mobile),
+    [class*="computer only"]:not(.mobile),
+    [class*="large monitor only"]:not(.mobile),
+    [class*="widescreen monitor only"]:not(.mobile),
+    [class*="or lower hidden"] {
+      display: none !important;
+    }
 }

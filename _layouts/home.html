@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div class="ui main text container">
-    <br />
     <div class="ui piled segment introduction">
         <h4 class="ui header cursive">Qu'est-ce que c'est ?</h4>
         <p>C'est une histoire de libraire et de lecteur. Et avant tout une histoire de livres.</p>
@@ -23,13 +22,13 @@ layout: default
         {% assign livre_image_original_root = livre_id | prepend: '/assets/images/livres/' %}
         {% assign livre_image_full_root = livre_id | prepend: '/assets/images/livres-full/' %}
         {% assign livre_image_small_root = livre_id | prepend: '/assets/images/livres-small/' %}
-        <div class="ten wide column">
+        <div class="sixteen wide mobile ten wide tablet ten wide computer column">
             <h2 class="cursive"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
             <div class="author">Écrit par {{ post.author }}</div>
             <div class="excerpt">{{ post.excerpt }}</div>
             <!-- {{ post.date | date: "%d/%m/%Y %H:%M" }} -->
         </div>
-        <div class="six wide column">
+        <div class="six wide column mobile hidden">
             <div class="ui small images" id="gallery-{{ forloop.index }}">
                 {% capture couverture_exists %}{% file_exists {{ livre_image_original_root }}couverture.jpg %}{% endcapture %}
                 {% if couverture_exists == "true" %}
