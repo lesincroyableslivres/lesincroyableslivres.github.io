@@ -120,7 +120,9 @@
 
           <p>
             Vous pouvez nous écrire à :
-            <code>contact (chez) lincroyablelibraire (point) fr</code>.
+            <a href="mailto:contact (chez) lincroyablelibraire (point) fr"
+              >contact (chez) lincroyablelibraire (point) fr</a
+            >.
           </p>
           <p>Ou même nous envoyer du courrier ou des cartes postales à :</p>
           <pre>
@@ -180,6 +182,19 @@
             </div>
           </div>
         </div>
+
+        <script>
+          $(function () {
+            $('a[href^="mailto:"]').each(function () {
+              this.href = this.href
+                .replace("%20(chez)%20", "@")
+                .replace(/%20\(point\)%20/g, ".");
+              this.innerText = this.innerText
+                .replace(" (chez) ", "@")
+                .replace(/ \(point\) /g, ".");
+            });
+          });
+        </script>
       </div>
     </main>
     <div class="ui vertical footer segment">
