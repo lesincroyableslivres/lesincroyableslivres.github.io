@@ -21,7 +21,7 @@
 title: L'Incroyable Libraire
 email: contact@lincroyablelibraire.fr
 description: >- # this means to ignore newlines until "baseurl:"
-  C'est une histoire de libraire et de lecteur. C'est avant tout une histoire de livres.
+  C'est une histoire de libraire et de lecteur. C'est une histoire de livres.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lincroyablelibraire.fr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
