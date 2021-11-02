@@ -1,10 +1,12 @@
 <div class="ui vertical footer segment">
     <div class="ui center aligned container">
-        <div class="cursive">L'incroyable libraire</div>
+        <div class="cursive">{{ site.title | capitalize }}</div>
         <hr />
         <div class="ui horizontal inverted small divided link list">
             <a class="item" href="/a-propos/">À propos</a>
+            {% if site.display_sources_link %}
             <a class="item" href="https://github.com/lincroyablelibraire/lincroyablelibraire.github.io"><i class="github icon"></i> Sources</a>
+            {% endif %}
         </div>
     </div>
 </div>
