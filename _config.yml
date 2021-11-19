@@ -32,6 +32,7 @@ google_analytics: G-GGSTD4E65V
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 #  - jekyll-minimagick
 
 lang: fr
