@@ -29,22 +29,22 @@ layout: default
             <!-- {{ post.date | date: "%d/%m/%Y %H:%M" }} -->
         </div>
         <div class="six wide column mobile hidden">
-            <div class="ui small images" id="gallery-{{ forloop.index }}">
+            <div class="ui small images">
                 {% capture couverture_exists %}{% file_exists {{ livre_image_original_root }}couverture.jpg %}{% endcapture %}
                 {% if couverture_exists == "true" %}
-                <a href="{{ livre_image_full_root }}couverture.jpg"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}couverture.jpg" title="{{ post.title | escape }} - Couverture"></a>
+                <a href="{{ livre_image_full_root }}couverture.jpg" class="gallery"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}couverture.jpg" title="{{ post.title | escape }} - Couverture"></a>
                 {% endif %}
                 {% capture extrait_exists %}{% file_exists {{ livre_image_original_root }}extrait.jpg %}{% endcapture %}
                 {% if extrait_exists == "true" %}
-                <a href="{{ livre_image_full_root }}extrait.jpg"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}extrait.jpg" title="{{ post.title | escape }} - Extrait"></a>
+                <a href="{{ livre_image_full_root }}extrait.jpg" class="gallery"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}extrait.jpg" title="{{ post.title | escape }} - Extrait"></a>
                 {% endif %}
             </div>
         </div>
         </div>
-        <script>
-            var lightbox = $('#gallery-{{ forloop.index }} a').simpleLightbox({ showCounter: false, animationSpeed: 50 });
-        </script>
         {%- endfor -%}
+        <script type="text/javascript">
+            var lightbox = $('a.gallery').simpleLightbox({ showCounter: false, animationSpeed: 50 });
+        </script>
     {% if site.paginate %}
         <div class="pager">
             <ul class="pagination">
