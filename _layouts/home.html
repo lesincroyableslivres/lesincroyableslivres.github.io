@@ -25,7 +25,12 @@ layout: default
         <div class="sixteen wide mobile ten wide tablet ten wide computer column">
             <h2 class="cursive"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
             <div class="author">Écrit par {{ post.author }}</div>
-            <div class="excerpt">{{ post.excerpt }}</div>
+            <div class="excerpt">
+                {% assign excerpt = post.excerpt | replace: "<p>", "" | replace: "</p>", "" | strip -%}
+                <p>
+                {{ excerpt }}{%- if post.excerpt != post.content %}<span style="white-space: nowrap;">&nbsp;<a href="{{ post.url | relative_url }}"><i class="plus circle icon"></i></a></span>{% endif %}
+                </p>
+            </div>
             <!-- {{ post.date | date: "%d/%m/%Y %H:%M" }} -->
         </div>
         <div class="six wide column mobile hidden">
