@@ -28,7 +28,7 @@ layout: default
             <div class="excerpt">
                 {% assign excerpt = post.excerpt | replace: "<p>", "" | replace: "</p>", "" | strip -%}
                 <p>
-                {{ excerpt }}{%- if post.excerpt != post.content %}<span style="white-space: nowrap;">&nbsp;<a href="{{ post.url | relative_url }}" title="Un peu plus à lire..."><i class="plus circle icon"></i></a></span>{% endif %}
+                {{ excerpt }}{%- if post.excerpt != post.content %}<span style="white-space: nowrap;">&nbsp;<a href="{{ post.url | relative_url }}" class="ui icon label dots tiny" title="Un peu plus à lire...">&middot;&middot;&middot;</a></span>{% endif %}
                 </p>
             </div>
             <!-- {{ post.date | date: "%d/%m/%Y %H:%M" }} -->
