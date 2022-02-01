@@ -60,6 +60,8 @@ hr:before { content: "\2022 \2022 \2022"; font-size: 50px; color: #02244a; }
 
 .author { margin-top: -8px; margin-bottom: 18px; color: #4183c4; font-weight: bold; font-style: italic; }
 
+.ui.dots.labels .label, .ui.dots.label { background-color: #c7eef5; border-color: #ccc; color: #02244a; }
+
 /* Mobile */
 @media only screen and (max-width: 767px) { [class*="mobile hidden"], [class*="tablet only"]:not(.mobile), [class*="computer only"]:not(.mobile), [class*="large monitor only"]:not(.mobile), [class*="widescreen monitor only"]:not(.mobile), [class*="or lower hidden"] { display: none !important; } }
 
