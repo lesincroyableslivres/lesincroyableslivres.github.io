@@ -16,6 +16,10 @@ main { padding-top: 25px; }
 
 .ui.piled.segment.introduction { background: #f07c41; color: white; border: 1px solid #df622c; margin: 2em 0; }
 
+.ui.piled.segment.introduction a { color: white; border-bottom: 1px dotted white; }
+
+.ui.piled.segment.introduction a:hover { color: white; border-bottom: 1px solid white; }
+
 .ui.segment.introduction .ui.header { color: white; }
 
 .ui.piled.segment.introduction:after, .ui.piled.segment.introduction:before, .ui.stacked.segment.introduction:after, .ui.stacked.segment.introduction:before { background: #f07c41; border: 1px solid #df622c; }
