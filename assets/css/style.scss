@@ -104,8 +104,21 @@ main {
     }
 }
 
+.title-cursive {
+    font-family: 'Neonderthaw', cursive !important;
+    font-size: 2.5rem !important;
+
+    a {
+        color: white;
+
+        &:hover {
+            color: #c7eef5;
+        }
+    }
+}
+
 .cursive {
-    font-family: 'Alex Brush', cursive !important;
+    font-family: 'Square Peg', cursive !important;
     font-size: 2.5rem !important;
 }
 
