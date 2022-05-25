@@ -44,7 +44,13 @@ main { padding-top: 25px; }
 
 .ui.footer.segment .cursive a:hover { color: #c7eef5; }
 
-.cursive { font-family: 'Alex Brush', cursive !important; font-size: 2.5rem !important; }
+.title-cursive { font-family: 'Neonderthaw', cursive !important; font-size: 2.5rem !important; }
+
+.title-cursive a { color: white; }
+
+.title-cursive a:hover { color: #c7eef5; }
+
+.cursive { font-family: 'Square Peg', cursive !important; font-size: 2.5rem !important; }
 
 .cursive.small { font-size: 1.5rem !important; }
 
