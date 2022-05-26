@@ -80,7 +80,7 @@ hr:before { content: "\2022 \2022 \2022"; font-size: 50px; color: #02244a; }
 
 .ui.dots.labels .label, .ui.dots.label { background-color: #c7eef5; border-color: #ccc; color: #02244a; }
 
-.ui.buttons.back .ui.icon.button { padding-right: 4.07142857em !important; }
+.ui.buttons.back .ui.icon.button { padding-right: 4.07142857em !important; border-radius: 0.28571429rem; }
 
 .ui.buttons.back .ui.icon.button > .icon.right { left: auto; right: 0; box-shadow: 1px 0 0 0 transparent inset; }
 
