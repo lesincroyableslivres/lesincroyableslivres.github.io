@@ -1,4 +1,6 @@
-body { background: white; margin-bottom: 5em; overflow-x: hidden; }
+html { overflow: hidden; }
+
+body { background: white; margin-bottom: 5em; }
 
 main { padding-top: 25px; }
 
@@ -16,7 +18,7 @@ main { padding-top: 25px; }
 
 .home .introduction-wrapper { margin-top: 8em; }
 
-.ui.basic.segment.introduction { background: #f07c41; color: white; border-top: 3px solid #df622c; border-bottom: 3px solid #df622c; transform: rotate(-2deg); margin: 2em -3em; padding-left: 3em; padding-right: 3em; }
+.ui.basic.segment.introduction { background: #f07c41; color: white; border-top: 3px solid #df622c; border-bottom: 3px solid #df622c; transform: rotate(-2deg); margin: 2em -3em; padding-left: 3em; padding-right: 3em; overflow: hidden; }
 
 .ui.basic.segment.introduction .ui.header { margin-bottom: 0.3rem; }
 
@@ -48,7 +50,7 @@ main { padding-top: 25px; }
 
 .wireframe { margin-top: 2em; }
 
-.ui.footer.segment { margin: 5em -5em 5em; padding: 5em 0em; background: #02244a; color: #c7eef5; transform: rotate(-2deg); }
+.ui.footer.segment { margin: 5em -1em 5em; padding: 5em 0em; background: #02244a; color: #c7eef5; transform: rotate(-2deg); overflow: hidden; }
 
 .ui.footer.segment .container { transform: rotate(2deg); }
 
