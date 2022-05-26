@@ -186,7 +186,7 @@ h1.book-title:first-letter, h2.book-title:first-letter {
 }
 
 @supports (-moz-appearance:none) {
-    h2.book-title:first-letter {
+    h1.book-title:first-letter, h2.book-title:first-letter {
         margin-top: -3px;
     }
 }
