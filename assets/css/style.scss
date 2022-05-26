@@ -279,8 +279,11 @@ hr:before {
 
 .ui.buttons.back {
     .ui.icon.button {
-        padding-right: 4.07142857em !important;
         border-radius: 0.28571429rem;
+    }
+
+    .ui.icon.button.double {
+        padding-right: 4.07142857em !important;
     }
 
     .ui.icon.button > .icon.right {
