@@ -64,7 +64,7 @@ h2 a { color: #df622c; }
 
 h2 a:hover { color: #02244a; }
 
-h2.book-title:first-letter { font-size: 3em; position: relative; float: left; margin-top: 20px; margin-right: 10px; text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3); }
+h2.book-title:first-letter { font-size: 3em; position: relative; float: left; margin-top: 20px; margin-right: 10px; text-shadow: 3px 2px 0px #fff, 8px 7px 0px rgba(0, 0, 0, 0.15); }
 
 @supports (-moz-appearance: none) { h2.book-title:first-letter { margin-top: 7px; } }
 
