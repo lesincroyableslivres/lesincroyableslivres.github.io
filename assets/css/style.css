@@ -26,7 +26,7 @@ main { padding-top: 25px; }
 
 .ui.basic.segment.introduction a:hover { color: white; border-bottom: 1px solid white; }
 
-@supports (-moz-appearance: none) { .ui.basic.segment.introduction h4:first-letter { margin-top: 7px; } }
+@supports (-moz-appearance: none) { .ui.basic.segment.introduction h4:first-letter { margin-top: 0px; } }
 
 .ui.segment.introduction .ui.header { color: white; }
 
