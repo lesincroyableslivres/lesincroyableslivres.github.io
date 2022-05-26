@@ -52,6 +52,10 @@ main {
     padding-left: 3em;
     padding-right: 3em;
 
+    .ui.header {
+        margin-bottom: 0.3rem;
+    }
+
     h4:first-letter {
         font-size: 3em;
         position: relative;
