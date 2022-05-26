@@ -78,7 +78,7 @@ main {
 @supports (-moz-appearance:none) {
     .ui.basic.segment.introduction {
         h4:first-letter {
-            margin-top: 7px;
+            margin-top: 0px;
         }
     }
 }
