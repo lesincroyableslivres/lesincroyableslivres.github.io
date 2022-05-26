@@ -221,11 +221,20 @@ hr:before {
     color: white;
 }
 
-.ui.cards.remerciements > .card > .image {
-    text-align: center;
-    padding: 20px;
-    background: #cdf0ff;
-    color: #02244a;
+.ui.cards.remerciements {
+    a {
+        border-bottom: 1px dotted #4183c4;
+    }
+    a:hover {
+        border-bottom: 1px solid #4183c4;
+    }
+
+    > .card > .image {
+        text-align: center;
+        padding: 20px;
+        background: #cdf0ff;
+        color: #02244a;
+    }
 }
 
 .ui.image.raised {
