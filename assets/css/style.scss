@@ -1,10 +1,13 @@
 ---
 ---
 
+html {
+    overflow: hidden;
+}
+
 body {
     background: white;
     margin-bottom: 5em;
-    overflow-x: hidden;
 }
 
 main {
@@ -52,6 +55,7 @@ main {
     margin: 2em -3em;
     padding-left: 3em;
     padding-right: 3em;
+    overflow: hidden;
 
     .ui.header {
         margin-bottom: 0.3rem;
@@ -127,11 +131,12 @@ main {
 }
 
 .ui.footer.segment {
-    margin: 5em -5em 5em;
+    margin: 5em -1em 5em;
     padding: 5em 0em;
     background: #02244a;
     color: #c7eef5;
     transform: rotate(-2deg);
+    overflow: hidden;
 
     .container {
         transform: rotate(2deg);
