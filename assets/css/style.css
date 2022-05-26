@@ -1,4 +1,4 @@
-body { background: white; margin-bottom: 5em; }
+body { background: white; margin-bottom: 5em; overflow-x: hidden; }
 
 main { padding-top: 25px; }
 
