@@ -3,6 +3,7 @@
 
 body {
     background: white;
+    margin-bottom: 5em;
 }
 
 main {
@@ -37,14 +38,17 @@ main {
     height: 80px;
 }
 
+.home .introduction-wrapper {
+    margin-top: 8em;
+}
+
 .ui.basic.segment.introduction {
     background: #f07c41;
     color: white;
     border-top: 3px solid #df622c;
     border-bottom: 3px solid #df622c;
-    border-radius: 6px;
-    transform: rotate(-1.5deg);
-    margin: 2em 0;
+    transform: rotate(-2deg);
+    margin: 2em -3em;
 
     h4:first-letter {
         font-size: 3em;
@@ -98,8 +102,13 @@ main {
 .ui.menu .item img.logo {
     margin-right: 1.5em;
 }
+
 .main.container {
     margin-top: 7em;
+}
+
+.home .main.container {
+    margin-top: 2em;
 }
 
 .ui.text.container {
@@ -109,11 +118,17 @@ main {
 .wireframe {
     margin-top: 2em;
 }
+
 .ui.footer.segment {
-    margin: 5em 0em 0em;
+    margin: 5em -5em 5em;
     padding: 5em 0em;
     background: #02244a;
     color: #c7eef5;
+    transform: rotate(-2deg);
+
+    .container {
+        transform: rotate(2deg);
+    }
 
     .cursive a {
         color: white;

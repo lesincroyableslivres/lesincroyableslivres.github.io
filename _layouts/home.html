@@ -2,71 +2,77 @@
 layout: default
 ---
 
-<div class="ui main text container">
-    <div class="ui basic segment introduction">
-        <h4 class="ui header cursive">Qu'est-ce que c'est ?</h4>
-        <p>C'est une histoire de libraire et de lecteur. C'est une histoire de livres. De livres qui enchantent, de livres qui marquent.</p>
+<div class="home">
+    <div class="introduction-wrapper">
+        <div class="ui basic segment introduction">
+            <div class="ui text container">
+                <h4 class="ui header cursive">Qu'est-ce que c'est ?</h4>
+                <p>C'est une histoire de libraire et de lecteur. C'est une histoire de livres. De livres qui enchantent, de livres qui marquent.</p>
+            </div>
+        </div>
     </div>
 
-    {% if site.paginate %}
-        {% assign posts = paginator.posts %}
-    {% else %}
-        {% assign posts = site.posts %}
-    {% endif %}
+    <div class="ui main text container">
+        {% if site.paginate %}
+            {% assign posts = paginator.posts %}
+        {% else %}
+            {% assign posts = site.posts %}
+        {% endif %}
 
-    {%- if posts.size > 0 -%}
-        {%- for post in posts -%}
-        <hr />
-        <div class="ui grid">
-        {% assign livre_id = post.url | relative_url | remove_first: '/livre/' | remove_first: '.html'  %}
-        {% assign livre_image_original_root = livre_id | prepend: '/assets/images/livres/' %}
-        {% assign livre_image_full_root = livre_id | prepend: '/assets/images/livres-full/' %}
-        {% assign livre_image_small_root = livre_id | prepend: '/assets/images/livres-small/' %}
-        <div class="sixteen wide mobile ten wide tablet ten wide computer column">
-            <h2 class="cursive book-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-            <div class="author">Écrit par {{ post.author }}</div>
-            <div class="excerpt">
-                {% assign excerpt = post.excerpt | replace: "<p>", "" | replace: "</p>", "" | strip -%}
-                <p>
-                {{ excerpt }}{%- if post.excerpt != post.content %}<span style="white-space: nowrap;">&nbsp;<a href="{{ post.url | relative_url }}" class="ui icon label dots tiny" title="Un peu plus à lire...">&middot;&middot;&middot;</a></span>{% endif %}
-                </p>
+        {%- if posts.size > 0 -%}
+            {%- for post in posts -%}
+            <hr />
+            <div class="ui grid">
+            {% assign livre_id = post.url | relative_url | remove_first: '/livre/' | remove_first: '.html'  %}
+            {% assign livre_image_original_root = livre_id | prepend: '/assets/images/livres/' %}
+            {% assign livre_image_full_root = livre_id | prepend: '/assets/images/livres-full/' %}
+            {% assign livre_image_small_root = livre_id | prepend: '/assets/images/livres-small/' %}
+            <div class="sixteen wide mobile ten wide tablet ten wide computer column">
+                <h2 class="cursive book-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                <div class="author">Écrit par {{ post.author }}</div>
+                <div class="excerpt">
+                    {% assign excerpt = post.excerpt | replace: "<p>", "" | replace: "</p>", "" | strip -%}
+                    <p>
+                    {{ excerpt }}{%- if post.excerpt != post.content %}<span style="white-space: nowrap;">&nbsp;<a href="{{ post.url | relative_url }}" class="ui icon label dots tiny" title="Un peu plus à lire...">&middot;&middot;&middot;</a></span>{% endif %}
+                    </p>
+                </div>
+                <!-- {{ post.date | date: "%d/%m/%Y %H:%M" }} -->
             </div>
-            <!-- {{ post.date | date: "%d/%m/%Y %H:%M" }} -->
-        </div>
-        <div class="six wide column mobile hidden">
-            <div class="ui small images">
-                {% capture couverture_exists %}{% file_exists {{ livre_image_original_root }}couverture.jpg %}{% endcapture %}
-                {% if couverture_exists == "true" %}
-                <a href="{{ livre_image_full_root }}couverture.jpg" class="gallery"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}couverture.jpg" title="{{ post.title | escape }} - Couverture"></a>
-                {% endif %}
-                {% capture extrait_exists %}{% file_exists {{ livre_image_original_root }}extrait.jpg %}{% endcapture %}
-                {% if extrait_exists == "true" %}
-                <a href="{{ livre_image_full_root }}extrait.jpg" class="gallery"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}extrait.jpg" title="{{ post.title | escape }} - Extrait"></a>
-                {% endif %}
+            <div class="six wide column mobile hidden">
+                <div class="ui small images">
+                    {% capture couverture_exists %}{% file_exists {{ livre_image_original_root }}couverture.jpg %}{% endcapture %}
+                    {% if couverture_exists == "true" %}
+                    <a href="{{ livre_image_full_root }}couverture.jpg" class="gallery"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}couverture.jpg" title="{{ post.title | escape }} - Couverture"></a>
+                    {% endif %}
+                    {% capture extrait_exists %}{% file_exists {{ livre_image_original_root }}extrait.jpg %}{% endcapture %}
+                    {% if extrait_exists == "true" %}
+                    <a href="{{ livre_image_full_root }}extrait.jpg" class="gallery"><img class="ui image bordered rounded raised" src="{{ livre_image_small_root }}extrait.jpg" title="{{ post.title | escape }} - Extrait"></a>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-        </div>
-        {%- endfor -%}
-        <script type="text/javascript">
-            var lightbox = $('a.gallery').simpleLightbox({ showCounter: false, animationSpeed: 50 });
-        </script>
-    {% if site.paginate %}
-        <div class="pager">
-            <ul class="pagination">
-            {%- if paginator.previous_page %}
-            <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-            {%- else %}
-            <li><div class="pager-edge">•</div></li>
-            {%- endif %}
-            <li><div class="current-page">{{ paginator.page }}</div></li>
-            {%- if paginator.next_page %}
-            <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-            {%- else %}
-            <li><div class="pager-edge">•</div></li>
-            {%- endif %}
-            </ul>
-        </div>
-    {%- endif %}
-    {%- endif -%}
+            </div>
+            {%- endfor -%}
+            <script type="text/javascript">
+                var lightbox = $('a.gallery').simpleLightbox({ showCounter: false, animationSpeed: 50 });
+            </script>
+        {% if site.paginate %}
+            <div class="pager">
+                <ul class="pagination">
+                {%- if paginator.previous_page %}
+                <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+                {%- else %}
+                <li><div class="pager-edge">•</div></li>
+                {%- endif %}
+                <li><div class="current-page">{{ paginator.page }}</div></li>
+                {%- if paginator.next_page %}
+                <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+                {%- else %}
+                <li><div class="pager-edge">•</div></li>
+                {%- endif %}
+                </ul>
+            </div>
+        {%- endif %}
+        {%- endif -%}
 
+    </div>
 </div>
