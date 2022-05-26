@@ -14,11 +14,13 @@ main { padding-top: 25px; }
 
 .incroyablelibraire .ui.tiny.images img { height: 80px; }
 
-.ui.piled.segment.introduction { background: #f07c41; color: white; border: 1px solid #df622c; margin: 2em 0; }
+.ui.basic.segment.introduction { background: #f07c41; color: white; border-top: 3px solid #df622c; border-bottom: 3px solid #df622c; border-radius: 6px; transform: rotate(-1.5deg); margin: 2em 0; }
 
-.ui.piled.segment.introduction a { color: white; border-bottom: 1px dotted white; }
+.ui.basic.segment.introduction h4:first-letter { font-size: 3em; position: relative; float: left; margin-top: 20px; margin-right: 10px; }
 
-.ui.piled.segment.introduction a:hover { color: white; border-bottom: 1px solid white; }
+.ui.basic.segment.introduction a { color: white; border-bottom: 1px dotted white; }
+
+.ui.basic.segment.introduction a:hover { color: white; border-bottom: 1px solid white; }
 
 .ui.segment.introduction .ui.header { color: white; }
 
