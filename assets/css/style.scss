@@ -37,11 +37,22 @@ main {
     height: 80px;
 }
 
-.ui.piled.segment.introduction {
+.ui.basic.segment.introduction {
     background: #f07c41;
     color: white;
-    border: 1px solid #df622c;
+    border-top: 3px solid #df622c;
+    border-bottom: 3px solid #df622c;
+    border-radius: 6px;
+    transform: rotate(-1.5deg);
     margin: 2em 0;
+
+    h4:first-letter {
+        font-size: 3em;
+        position: relative;
+        float: left;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
 
     a {
         color: white;
