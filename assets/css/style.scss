@@ -170,7 +170,7 @@ h2.book-title:first-letter {
 
 @supports (-moz-appearance:none) {
     h2.book-title:first-letter {
-        margin-top: 7px;
+        margin-top: -3px;
     }
 }
 
