@@ -23,7 +23,7 @@ layout: default
         {% assign livre_image_full_root = livre_id | prepend: '/assets/images/livres-full/' %}
         {% assign livre_image_small_root = livre_id | prepend: '/assets/images/livres-small/' %}
         <div class="sixteen wide mobile ten wide tablet ten wide computer column">
-            <h2 class="cursive"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <h2 class="cursive book-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
             <div class="author">Écrit par {{ post.author }}</div>
             <div class="excerpt">
                 {% assign excerpt = post.excerpt | replace: "<p>", "" | replace: "</p>", "" | strip -%}
