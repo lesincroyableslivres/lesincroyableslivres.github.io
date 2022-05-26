@@ -176,7 +176,7 @@ h2 a:hover {
     color: #02244a;
 }
 
-h2.book-title:first-letter {
+h1.book-title:first-letter, h2.book-title:first-letter {
     font-size: 3em;
     position: relative;
     float: left;

@@ -9,7 +9,7 @@ layout: default
         {% assign livre_image_medium_root = livre_id | prepend: '/assets/images/livres-medium/' %}
         <div class="ui centered grid">
             <div class="sixteen wide mobile twelve wide tablet twelve wide computer column">
-                <h1 class="cursive" itemprop="name headline">{{ page.title | escape }}</h1>
+                <h1 class="cursive book-title" itemprop="name headline">{{ page.title | escape }}</h1>
                 <div class="author">Écrit par {{ page.author | escape }}</div>
                 <div class="content" itemprop="articleBody">
                     {{ content }}
