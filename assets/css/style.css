@@ -78,6 +78,10 @@ h1.book-title:first-letter, h2.book-title:first-letter { font-size: 3em; positio
 
 @supports (-moz-appearance: none) { h1.book-title:first-letter, h2.book-title:first-letter { margin-top: -3px; } }
 
+.ui.small.images img.image { height: 200px; }
+
+.ui.medium.images img.image { height: 400px; }
+
 hr { margin: 0; margin-bottom: 70px; border: 0; text-align: center; }
 
 hr:before { content: "\2022 \2022 \2022"; font-size: 50px; color: #02244a; }
