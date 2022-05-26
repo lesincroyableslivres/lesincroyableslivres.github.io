@@ -1,4 +1,4 @@
-body { background: white; }
+body { background: white; margin-bottom: 5em; }
 
 main { padding-top: 25px; }
 
@@ -14,7 +14,9 @@ main { padding-top: 25px; }
 
 .incroyablelibraire .ui.tiny.images img { height: 80px; }
 
-.ui.basic.segment.introduction { background: #f07c41; color: white; border-top: 3px solid #df622c; border-bottom: 3px solid #df622c; border-radius: 6px; transform: rotate(-1.5deg); margin: 2em 0; }
+.home .introduction-wrapper { margin-top: 8em; }
+
+.ui.basic.segment.introduction { background: #f07c41; color: white; border-top: 3px solid #df622c; border-bottom: 3px solid #df622c; transform: rotate(-2deg); margin: 2em -3em; }
 
 .ui.basic.segment.introduction h4:first-letter { font-size: 3em; position: relative; float: left; margin-top: 20px; margin-right: 10px; text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.3); }
 
@@ -38,11 +40,15 @@ main { padding-top: 25px; }
 
 .main.container { margin-top: 7em; }
 
+.home .main.container { margin-top: 2em; }
+
 .ui.text.container { max-width: 910px; }
 
 .wireframe { margin-top: 2em; }
 
-.ui.footer.segment { margin: 5em 0em 0em; padding: 5em 0em; background: #02244a; color: #c7eef5; }
+.ui.footer.segment { margin: 5em -5em 5em; padding: 5em 0em; background: #02244a; color: #c7eef5; transform: rotate(-2deg); }
+
+.ui.footer.segment .container { transform: rotate(2deg); }
 
 .ui.footer.segment .cursive a { color: white; }
 
