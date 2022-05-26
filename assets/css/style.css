@@ -80,6 +80,8 @@ hr:before { content: "\2022 \2022 \2022"; font-size: 50px; color: #02244a; }
 
 .ui.cards.remerciements > .card > .image { text-align: center; padding: 20px; background: #c7eef5; color: #02244a; }
 
+.ui.image.rounded { border-radius: 8px; }
+
 .author { margin-top: -8px; margin-bottom: 18px; color: #4183c4; font-weight: bold; font-style: italic; }
 
 .ui.dots.labels .label, .ui.dots.label { background-color: #c7eef5; border-color: #ccc; color: #02244a; }
