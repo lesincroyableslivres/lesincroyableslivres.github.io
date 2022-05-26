@@ -86,6 +86,10 @@ hr:before { content: "\2022 \2022 \2022"; font-size: 50px; color: #02244a; }
 
 .footer hr:before { color: white; }
 
+.ui.cards.remerciements a { border-bottom: 1px dotted #4183c4; }
+
+.ui.cards.remerciements a:hover { border-bottom: 1px solid #4183c4; }
+
 .ui.cards.remerciements > .card > .image { text-align: center; padding: 20px; background: #cdf0ff; color: #02244a; }
 
 .ui.image.rounded { border-radius: 8px; }
