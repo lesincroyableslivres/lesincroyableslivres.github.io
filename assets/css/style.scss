@@ -203,10 +203,12 @@ h1.book-title:first-letter, h2.book-title:first-letter {
 
 .ui.small.images img.image {
     height: 200px;
+    border: 1px solid #CCC;
 }
 
 .ui.medium.images img.image {
     height: 400px;
+    border: 1px solid #CCC;
 }
 
 hr {
