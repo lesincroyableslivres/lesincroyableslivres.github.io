@@ -2,7 +2,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   {%- seo -%}
+  {% if page.author %}
+    {% assign livre_id = page.url | relative_url | remove_first: '/livre/' | remove_first: '.html' %}
+    {% assign livre_image_original_root = livre_id | prepend: '/assets/images/livres/' %}
+    {% assign livre_image_medium_root = livre_id | prepend: '/assets/images/livres-medium/' %}
+    {% capture couverture_exists %}{% file_exists {{ livre_image_original_root }}couverture.jpg %}{% endcapture %}
+    {% if couverture_exists == "true" %}
+      <meta property="og:image" content="{{ site.url }}{{ livre_image_medium_root }}couverture.jpg">
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}/assets/images/dot-12.jpg">
+    {% endif %}
+  {% else %}
+    <meta property="og:image" content="{{ site.url }}/assets/images/dot-12.jpg">
+  {% endif %}
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
