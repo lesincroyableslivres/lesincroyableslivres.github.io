@@ -10,7 +10,7 @@ layout: default
         <div class="ui centered grid">
             <div class="sixteen wide mobile twelve wide tablet twelve wide computer column">
                 <h1 class="cursive book-title" itemprop="name headline">{{ page.title | escape }}</h1>
-                <div class="author">Écrit par {{ page.author | escape }}</div>
+                <div class="author">{% if page.written-by %}{{ page.written-by | escape }}{% else %}Écrit par {{ page.author | escape }}{% endif %}</div>
                 <div class="content" itemprop="articleBody">
                     {{ content }}
                 </div>
