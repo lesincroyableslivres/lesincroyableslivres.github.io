@@ -16,4 +16,4 @@ On a déjà lu et on a beaucoup aimé :
 
 On a hâte de lire les autres.
 
-Et oui, je les ai découverts beaucoup trop tard, honte à moi (et à ma libraire !).
+Et oui, on les a découverts beaucoup trop tard, honte à moi (et à ma libraire !).
