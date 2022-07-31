@@ -13,6 +13,7 @@ On a déjà lu et on a beaucoup aimé :
 - Et puis ça fait bête d'être triste en maillot de bain _(meilleur titre du monde !)_
 - Du bulgom et des hommes
 - La femme brouillon
+- Ça nous apprendra à naître dans le Nord _(non disponible, lu en e-book, plus jamais ça)_
 
 On a hâte de lire les autres.
 
