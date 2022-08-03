@@ -9,4 +9,4 @@ _"Tu sais mon fils, c'est bien d'être marocain, c'est bien d'être français et
 
 Parfois, je me demande ce qu'aurait été ma vie si c'est mon grand-père paternel qui avait été algérien et que j'avais hérité de son patronyme.
 
-Premier roman, pas aussi abouti que [Fuir l'eden](../fuir-l-eden/) mais très attachant.
+Premier roman, pas aussi abouti que [Fuir l'eden](/livre/fuir-l-eden/) mais très attachant.
