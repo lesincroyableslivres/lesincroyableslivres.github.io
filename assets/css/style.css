@@ -64,6 +64,8 @@ main { padding-top: 25px; }
 
 .title-cursive a:hover { color: #c7eef5; }
 
+.year { font-family: 'Neonderthaw', cursive !important; font-size: 2.5rem !important; font-weight: normal !important; font-weight: bold; color: #02244a; text-align: center; margin-top: -10px; margin-bottom: -16px; }
+
 .cursive { font-family: 'Square Peg', cursive !important; font-size: 2.5rem !important; }
 
 .cursive.small { font-size: 1.5rem !important; }
