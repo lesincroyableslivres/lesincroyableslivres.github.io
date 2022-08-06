@@ -33,4 +33,4 @@ _Presque le silence, c'est aussi cette fin qui m'a perdu. Cette fin dont je n'ai
 
 _Alors, Julie Estève, j'aime profondément votre livre et si un jour nous nous croisons, au hasard d'une rencontre littéraire à cette fameuse Librairie Rive Gauche à Lyon, nous discuterons de cette fin, et surtout de tout le reste._
 
-_Julie Estève, j'espère sincèrement avoir le plaisir de vous lire à nouveau._
+_Julie Estève, j'espère sincèrement avoir le plaisir de vous lire à nouveau. Vous m'avez ému._
