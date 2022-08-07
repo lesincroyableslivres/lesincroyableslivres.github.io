@@ -25,7 +25,7 @@ _Et, Cécile mon Incroyable Libraire en soit témoin, j'en ai lu des livres chou
 _Presque le silence, c'est se forcer à ne pas le lire d'une traite pour le faire durer un peu plus._<br>
 _Presque le silence, c'est se lever de son canapé pour dire tout haut combien on aime ce livre. Même (surtout ?) si on est seul dans son appartement._<br>
 _Presque le silence, c'est en commander trois autres pour les offrir avant même de l'avoir fini._<br>
-_Presque le silence, c'est envoyer des photos de pages tout le week-end à son Incroyable Libraire pour lui intimer de lâcher ce qu'elle lit et de lire ce livre-là. Pas un autre. Maintenant. Tout de suite._<br>
+_Presque le silence, c'est envoyer des photos de pages tout le week-end à son Incroyable Libraire pour lui intimer (gentiment) de lâcher ce qu'elle lit et de lire ce livre-là. Pas un autre. Maintenant. Tout de suite._<br>
 
 _Mais. Et je suis tellement désolé qu'il y ait un mais._
 
