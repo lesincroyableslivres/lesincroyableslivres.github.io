@@ -14,6 +14,7 @@ On a déjà lu et on a beaucoup aimé :
 - Du bulgom et des hommes
 - La femme brouillon
 - Ça nous apprendra à naître dans le Nord _(non disponible, lu en e-book, plus jamais ça)_
+- À mains nues
 
 On a hâte de lire les autres.
 
