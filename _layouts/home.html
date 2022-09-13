@@ -88,10 +88,29 @@ layout: default
             <script type="text/javascript">
                 var lightbox = $('a.gallery').simpleLightbox({ showCounter: false, animationSpeed: 50 });
 
+                String.prototype.toSearch = function() {
+                    return this.trim().toLowerCase().replace(
+                        /([àáâãäå])|([çčć])|([èéêë])|([ìíîï])|([ñ])|([òóôõöø])|([ß])|([ùúûü])|([ÿ])|([æ])|([œ])/g, 
+                        function (str, a, c, e, i, n, o, s, u, y, ae, oe) {
+                            if (a) return 'a';
+                            if (c) return 'c';
+                            if (e) return 'e';
+                            if (i) return 'i';
+                            if (n) return 'n';
+                            if (o) return 'o';
+                            if (s) return 's';
+                            if (u) return 'u';
+                            if (y) return 'y';
+                            if (ae) return 'ae';
+                            if (oe) return 'oe';
+                        }
+                    );
+                };
+
                 $(document).ready(function() {
                     $("#search-input").on("keyup", function() {
-                        var value = $(this).val().toLowerCase();
-                        if (value.trim().length === 0) {
+                        var value = $(this).val().toSearch();
+                        if (value.length === 0) {
                             $(".no-results").first().hide();
                             $(".book-row").show();
                             $("hr").first().show();
@@ -103,8 +122,8 @@ layout: default
                         $(".year").hide();
                         $("hr").first().hide();
                         $(".book-row").filter(function() {
-                            $(this).toggle($(this).find("a").text().toLowerCase().indexOf(value) > -1 ||
-                                    $(this).find(".author-name").text().toLowerCase().indexOf(value) > -1);
+                            $(this).toggle($(this).find("a").text().toSearch().indexOf(value) > -1 ||
+                                    $(this).find(".author-name").text().toSearch().indexOf(value) > -1);
                         });
                         if($(".book-row:visible").length === 0) {
                             $(".no-results").first().show();
