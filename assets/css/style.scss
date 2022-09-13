@@ -165,7 +165,7 @@ main {
     }
 }
 
-.year {
+.year, .selection-name {
     font-family: 'Neonderthaw', cursive !important;
     font-size: 2.5rem !important;
     font-weight: normal !important;
@@ -174,6 +174,53 @@ main {
     text-align: center;
     margin-top: -10px;
     margin-bottom: -16px;
+}
+
+.selections {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fafafa;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .ui.icon.input {
+        width: 100%;
+    }
+}
+
+.no-results {
+    text-align: center;
+    color: #888;
+    font-size: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    display: none;
+}
+
+.selection-labels {
+    margin-top: 6px;
+}
+
+.selection-name {
+    font-size: 3.5rem !important;
+    margin-bottom: -10px;
+}
+
+.selection-name::first-letter {
+    text-transform: uppercase;
+}
+
+.selection-labels a.label, .selection-labels a.ui.label:hover {
+    background-color: #E1F5FE;
+    border: 1px solid #81D4FA;
+    color: #01579B;
+}
+
+.selection-labels a.ui.label:hover {
+    border: 1px solid #E1F5FE;
 }
 
 .cursive {
@@ -233,6 +280,19 @@ hr:before {
     content: "\2022 \2022 \2022";
     font-size: 50px;
     color: #02244a;
+}
+
+hr.selection {
+    margin: 0;
+    margin-bottom: 90px;
+    border: 0;
+    text-align: center;
+}
+
+hr.selection:before {
+    content: "\2022";
+    font-size: 50px;
+    color: #df622c;
 }
 
 .ui.footer.segment .cursive {

@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="selection">
+    <div class="ui main text container">
+        <div class="selection-name">{{ page.title }}</div>
+        <hr class="selection">
+
+        {% assign sortedPosts = page.posts | sort_natural: 'url' %}
+        {%- for post in sortedPosts -%}
+        <div class="ui grid">
+        {% assign livre_id = post.url | relative_url | remove_first: '/livre/' | remove_first: '.html'  %}
+        {% assign livre_image_original_root = livre_id | prepend: '/assets/images/livres/' %}
+        {% assign livre_image_full_root = livre_id | prepend: '/assets/images/livres-full/' %}
+        {% assign livre_image_small_root = livre_id | prepend: '/assets/images/livres-small/' %}
+        <div class="sixteen wide mobile ten wide tablet ten wide computer column">
+            <h2 class="cursive book-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <div class="author">{% if post.written-by %}{{ post.written-by | escape }}{% else %}Écrit par {{ post.author | escape }}{% endif %}</div>
+            <div class="excerpt">
+                {% assign excerpt = post.excerpt | replace: "<p>", "" | replace: "</p>", "" | strip -%}
+                <p>
+                {{ excerpt }}{%- if post.excerpt != post.content %}<span style="white-space: nowrap;">&nbsp;<a href="{{ post.url | relative_url }}" class="ui icon label dots tiny" title="Un peu plus à lire...">&middot;&middot;&middot;</a></span>{% endif %}
+                </p>
+            </div>
+            <!-- {{ post.date | date: "%d/%m/%Y %H:%M" }} -->
+        </div>
+        <div class="six wide column mobile hidden">
+            <div class="ui small images">
+                {% capture couverture_exists %}{% file_exists {{ livre_image_original_root }}couverture.jpg %}{% endcapture %}
+                {% if couverture_exists == "true" %}
+                <a href="{{ livre_image_full_root }}couverture.jpg" class="gallery"><img class="ui image bordered rounded raised" loading="lazy" src="{{ livre_image_small_root }}couverture.jpg" title="{{ post.title | escape }} - Couverture"></a>
+                {% endif %}
+                {% capture extrait_exists %}{% file_exists {{ livre_image_original_root }}extrait.jpg %}{% endcapture %}
+                {% if extrait_exists == "true" %}
+                <a href="{{ livre_image_full_root }}extrait.jpg" class="gallery"><img class="ui image bordered rounded raised" loading="lazy" src="{{ livre_image_small_root }}extrait.jpg" title="{{ post.title | escape }} - Extrait"></a>
+                {% endif %}
+            </div>
+        </div>
+        </div>
+        {% if forloop.last == false %}<hr>{% endif %}
+        {%- endfor -%}
+        <script type="text/javascript">
+            var lightbox = $('a.gallery').simpleLightbox({ showCounter: false, animationSpeed: 50 });
+        </script>
+    </div>
+</div>

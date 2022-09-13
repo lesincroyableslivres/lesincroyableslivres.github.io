@@ -33,6 +33,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-archives
 #  - jekyll-minimagick
 
 lang: fr
@@ -47,6 +48,16 @@ defaults:
       type: "posts"
     values:
       permalink: /livre/:title/
+
+# https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
+jekyll-archives:
+  enabled: 
+    - tags
+  layouts: 
+    tag: selection
+  permalinks:
+    tag: '/selection/:name/'
+  slug_mode: latin
 
 mini_magick:
   thumbnail:

@@ -12,6 +12,30 @@ layout: default
         </div>
     </div>
 
+    <div class="selections">
+        <div class="ui text container">
+            <div class="ui aligned grid">
+                <div class="left floated five wide computer five wide tablet sixteen wide mobile column">
+                    <div class="ui fluid search">
+                        <div class="ui icon input">
+                            <input class="prompt" type="text" placeholder="Recherche..." id="search-input">
+                            <i class="search icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="right floated middle aligned eleven wide computer eleven wide tablet sixteen wide mobile column">
+                    <div class="ui circular labels large selection-labels">
+                        {% assign tags = site.tags | sort %}
+                        {% for tag_array in tags %}
+                            {% assign tag = tag_array | first %}
+                            <a href="/selection/{{tag | slugify }}" class="ui label">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="ui main text container">
         {% if site.paginate %}
             {% assign posts = paginator.posts %}
@@ -21,13 +45,14 @@ layout: default
 
         {%- if posts.size > 0 -%}
             {%- for post in posts -%}
+            <div class="book-row">
             {% assign postYear = post.date | date: "%Y" %}
             {% if postYear != currentYear %}
                 {% if currentYear %}<hr>{% endif %}
                 {% assign currentYear = postYear %}
                 <div class="year">{{ currentYear }}</div>
             {% endif %}
-            <hr />
+            <hr>
             <div class="ui grid">
             {% assign livre_id = post.url | relative_url | remove_first: '/livre/' | remove_first: '.html'  %}
             {% assign livre_image_original_root = livre_id | prepend: '/assets/images/livres/' %}
@@ -35,7 +60,7 @@ layout: default
             {% assign livre_image_small_root = livre_id | prepend: '/assets/images/livres-small/' %}
             <div class="sixteen wide mobile ten wide tablet ten wide computer column">
                 <h2 class="cursive book-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-                <div class="author">{% if post.written-by %}{{ post.written-by | escape }}{% else %}Écrit par {{ post.author | escape }}{% endif %}</div>
+                <div class="author">{% if post.written-by %}<span class="author-name">{{ post.written-by | escape }}</span>{% else %}Écrit par <span class="author-name">{{ post.author | escape }}</span>{% endif %}</div>
                 <div class="excerpt">
                     {% assign excerpt = post.excerpt | replace: "<p>", "" | replace: "</p>", "" | strip -%}
                     <p>
@@ -57,9 +82,35 @@ layout: default
                 </div>
             </div>
             </div>
+            </div>
             {%- endfor -%}
+            <div class="no-results">Aucun livre ne correspond à la recherche.</div>
             <script type="text/javascript">
                 var lightbox = $('a.gallery').simpleLightbox({ showCounter: false, animationSpeed: 50 });
+
+                $(document).ready(function() {
+                    $("#search-input").on("keyup", function() {
+                        var value = $(this).val().toLowerCase();
+                        if (value.trim().length === 0) {
+                            $(".no-results").first().hide();
+                            $(".book-row").show();
+                            $("hr").first().show();
+                            $(".year").show();
+                            return;
+                        }
+
+                        $(".no-results").first().hide();
+                        $(".year").hide();
+                        $("hr").first().hide();
+                        $(".book-row").filter(function() {
+                            $(this).toggle($(this).find("a").text().toLowerCase().indexOf(value) > -1 ||
+                                    $(this).find(".author-name").text().toLowerCase().indexOf(value) > -1);
+                        });
+                        if($(".book-row:visible").length === 0) {
+                            $(".no-results").first().show();
+                        }
+                    });
+                });
             </script>
         {% if site.paginate %}
             <div class="pager">
