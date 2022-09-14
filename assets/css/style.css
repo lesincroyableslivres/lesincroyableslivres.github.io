@@ -64,11 +64,13 @@ main { padding-top: 25px; }
 
 .title-cursive a:hover { color: #c7eef5; }
 
-.year, .selection-name { font-family: 'Neonderthaw', cursive !important; font-size: 2.5rem !important; font-weight: normal !important; font-weight: bold; color: #02244a; text-align: center; margin-top: -10px; margin-bottom: -16px; }
+.year, .selection-name { font-family: 'Neonderthaw', cursive !important; font-size: 2.5rem; font-weight: normal !important; font-weight: bold; color: #02244a; text-align: center; margin-top: -10px; margin-bottom: -16px; }
 
-.selections { margin-top: 4rem; margin-bottom: 1rem; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; background-color: #fafafa; padding-top: 5px; padding-bottom: 5px; }
+.selections { margin-top: 4rem; margin-bottom: 1rem; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; background-color: #fafafa; padding-top: 10px; padding-bottom: 10px; }
 
 .selections .ui.icon.input { width: 100%; }
+
+@media (max-width: 480px) { .selections { padding-top: 8px; padding-bottom: 8px; } .ui.grid > .column:not(.row):first-child { padding-bottom: 0; } .home .introduction-wrapper { margin-top: 6em; } .selection-name { font-size: 2.5rem; } }
 
 .no-results { text-align: center; color: #888; font-size: 2rem; margin-top: 8rem; margin-bottom: 8rem; display: none; }
 
@@ -78,7 +80,7 @@ main { padding-top: 25px; }
 
 .post article .content { margin-top: 30px; }
 
-.selection-name { font-size: 3.5rem !important; margin-bottom: -10px; }
+.selection-name { font-size: 3.5rem; margin-bottom: -10px; }
 
 .selection-name::first-letter { text-transform: uppercase; }
 
