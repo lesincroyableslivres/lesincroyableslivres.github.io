@@ -167,7 +167,7 @@ main {
 
 .year, .selection-name {
     font-family: 'Neonderthaw', cursive !important;
-    font-size: 2.5rem !important;
+    font-size: 2.5rem;
     font-weight: normal !important;
     font-weight: bold;
     color: #02244a;
@@ -183,11 +183,30 @@ main {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     background-color: #fafafa;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     .ui.icon.input {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .selections {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .ui.grid > .column:not(.row):first-child {
+        padding-bottom: 0;
+    }
+
+    .home .introduction-wrapper {
+        margin-top: 6em;
+    }
+
+    .selection-name {
+        font-size: 2.5rem;
     }
 }
 
@@ -213,7 +232,7 @@ main {
 }
 
 .selection-name {
-    font-size: 3.5rem !important;
+    font-size: 3.5rem;
     margin-bottom: -10px;
 }
 
