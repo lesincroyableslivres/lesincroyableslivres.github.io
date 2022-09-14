@@ -204,6 +204,14 @@ main {
     margin-top: 6px;
 }
 
+.post .selection-labels {
+    margin-top: 30px;
+}
+
+.post article .content {
+    margin-top: 30px;
+}
+
 .selection-name {
     font-size: 3.5rem !important;
     margin-bottom: -10px;
@@ -215,12 +223,12 @@ main {
 
 .selection-labels a.label, .selection-labels a.ui.label:hover {
     background-color: #E1F5FE;
-    border: 1px solid #81D4FA;
     color: #01579B;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .selection-labels a.ui.label:hover {
-    border: 1px solid #E1F5FE;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .cursive {
