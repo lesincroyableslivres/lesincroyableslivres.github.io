@@ -28,7 +28,7 @@ layout: default
                         {% assign tags = site.tags | sort %}
                         {% for tag_array in tags %}
                             {% assign tag = tag_array | first %}
-                            <a href="/selection/{{tag | slugify }}" class="ui label">{{ tag }}</a>
+                            <a href="/selection/{{tag | slugify }}/" class="ui label">{{ tag }}</a>
                         {% endfor %}
                     </div>
                 </div>

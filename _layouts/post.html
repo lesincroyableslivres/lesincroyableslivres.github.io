@@ -15,7 +15,7 @@ layout: default
                 <div class="ui circular labels large selection-labels">
                     {% assign tags = page.tags | sort %}
                     {% for tag in tags %}
-                        <a href="/selection/{{tag | slugify }}" class="ui label">{{ tag }}</a>
+                        <a href="/selection/{{tag | slugify }}/" class="ui label">{{ tag }}</a>
                     {% endfor %}
                 </div>
                 {% endif %}
